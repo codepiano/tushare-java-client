@@ -1,0 +1,74 @@
+package com.codepiano.tushare.params;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
+/**
+ * @author codepiano
+ * @date 2019-07-17T00:39:27.861194
+ */
+@Builder
+@Getter
+@Setter
+@ToString
+@EqualsAndHashCode
+@NoArgsConstructor
+@AllArgsConstructor
+public class TmtTwincomedetailParam implements Param {
+
+    /**
+     * 可选
+     * <p>
+     * 报告期
+     */
+    @JsonProperty(value = "date")
+    private String date;
+
+    /**
+     * 可选
+     * <p>
+     * 产品代码
+     */
+    @JsonProperty(value = "item")
+    private String item;
+
+    /**
+     * 可选
+     * <p>
+     * 公司代码
+     */
+    @JsonProperty(value = "symbol")
+    private String symbol;
+
+    /**
+     * 可选
+     * <p>
+     * 报告期开始日期
+     */
+    @JsonProperty(value = "start_date")
+    private String startDate;
+
+    /**
+     * 可选
+     * <p>
+     * 报告期结束日期
+     */
+    @JsonProperty(value = "end_date")
+    private String endDate;
+
+    /**
+     * 可选
+     * <p>
+     * None
+     */
+    @JsonProperty(value = "source")
+    private String source;
+
+
+}
